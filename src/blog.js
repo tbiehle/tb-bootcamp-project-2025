@@ -17,13 +17,19 @@ var blogs = [
     },
 ];
 var blogContainer = document.getElementById("blog-container");
-console.log("here");
 blogs.forEach(function (blog) {
     var new_post = document.createElement("div");
-    // create h1 element
+    // create blog header element
     var titleEl = document.createElement("h1");
-    titleEl.textContent = blog.title;
+    var linkEl = document.createElement("a"); // <a> to be nested inside the header
+    linkEl.href = "blog/".concat(blog.slug, ".html");
+    linkEl.textContent = blog.title;
+    titleEl.appendChild(linkEl);
     new_post.appendChild(titleEl);
+    // create description element
+    var descEl = document.createElement("p");
+    descEl.textContent = blog.description;
+    new_post.appendChild(descEl);
     // if there is an image url create an img element
     if (blog.image) {
         var img = document.createElement("img");

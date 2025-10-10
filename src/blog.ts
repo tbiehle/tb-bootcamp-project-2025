@@ -27,14 +27,23 @@ const blogs: Blog[] = [
 ];
 
 const blogContainer = document.getElementById("blog-container");
-console.log("here")
 blogs.forEach((blog) => {
   const new_post = document.createElement("div");
 
-  // create h1 element
+  // create blog header element
   const titleEl = document.createElement("h1");
-  titleEl.textContent = blog.title;
+
+  const linkEl = document.createElement("a"); // <a> to be nested inside the header
+  linkEl.href = `blog/${blog.slug}.html`
+  linkEl.textContent = blog.title;
+
+  titleEl.appendChild(linkEl);
   new_post.appendChild(titleEl);
+
+  // create description element
+  const descEl = document.createElement("p");
+  descEl.textContent = blog.description;
+  new_post.appendChild(descEl);
 
   // if there is an image url create an img element
   if (blog.image) {
