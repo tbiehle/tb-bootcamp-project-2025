@@ -16,7 +16,11 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: 'monospace';
+  font-family: "monospace";
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* CSS for navigation */
@@ -261,4 +265,27 @@ form {
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+}
+
+.blog-thumbnail {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 10em;
+    min-width: 6rem;
+    max-width: 30rem;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+    border: solid;
+    border-radius: 20px;
+}
+
+.blog-list {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    height: 100vh; 
+}
+
+.blog-thumbnail-title {
+    margin-top: 0;
+    margin-bottom: 0;
 }

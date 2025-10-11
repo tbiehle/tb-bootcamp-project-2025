@@ -29,9 +29,11 @@ const blogs: Blog[] = [
 const blogContainer = document.getElementById("blog-container");
 blogs.forEach((blog) => {
   const new_post = document.createElement("div");
+  new_post.className = "blog-thumbnail"
 
   // create blog header element
-  const titleEl = document.createElement("h1");
+  const titleEl = document.createElement("h2");
+  titleEl.classList.add("blog-thumbnail-title")
 
   const linkEl = document.createElement("a"); // <a> to be nested inside the header
   linkEl.href = `blog/${blog.slug}.html`

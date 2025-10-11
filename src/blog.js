@@ -19,8 +19,10 @@ var blogs = [
 var blogContainer = document.getElementById("blog-container");
 blogs.forEach(function (blog) {
     var new_post = document.createElement("div");
+    new_post.className = "blog-thumbnail";
     // create blog header element
-    var titleEl = document.createElement("h1");
+    var titleEl = document.createElement("h2");
+    titleEl.classList.add("blog-thumbnail-title");
     var linkEl = document.createElement("a"); // <a> to be nested inside the header
     linkEl.href = "blog/".concat(blog.slug, ".html");
     linkEl.textContent = blog.title;
