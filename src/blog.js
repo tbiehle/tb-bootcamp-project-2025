@@ -1,11 +1,11 @@
 var blogs = [
     {
-        title: "my awesome blog post",
+        title: "funny cat",
         date: "10-09-2025",
-        description: "this is the first blog post of many awesome blog posts",
+        description: "click for a surpise...",
         image: "",
         imageAlt: "",
-        slug: "my-awesome-blog-post",
+        slug: "funny-cat",
     },
     {
         title: "blog post 2",

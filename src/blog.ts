@@ -9,12 +9,12 @@ type Blog = {
 
 const blogs: Blog[] = [
   {
-    title: "my awesome blog post",
+    title: "funny cat",
     date: "10-09-2025",
-    description: "this is the first blog post of many awesome blog posts",
-    image: "",
-    imageAlt: "",
-    slug: "my-awesome-blog-post",
+    description: "click for a surpise...",
+    image: "rigby_cat.webp",
+    imageAlt: "Funny cat from the internet named rigby. He has his tongue out and is making a funny face",
+    slug: "funny-cat",
   },
   {
     title: "blog post 2",
