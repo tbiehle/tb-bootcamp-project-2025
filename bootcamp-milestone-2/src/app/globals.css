@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap');
 @import "tailwindcss";
+
+@theme {
+    /* colors */
+    --color-theme-gray: #6b7d7d;
+    --color-theme-succulent: #8EAF9D;
+    --color-theme-dark-succ: #7D968D;
+
+    /* fonts */
+    --font-title: "Radley", serif;
+}
 
 :root {
   --background: #ffffff;
