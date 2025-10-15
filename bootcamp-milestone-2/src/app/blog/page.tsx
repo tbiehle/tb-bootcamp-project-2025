@@ -1,16 +1,18 @@
 import React from "react";
 import blogs from "../blogData";
-import styles from "./page.module.css";
+import BlogPreview from "@/components/blogPreview";
 
 export default function Blog() {
   return (
     <div>
-      <h1>Blog</h1>
+      <h1 className="flex 
+      text-5xl font-title font-bold text-emerald-800
+      justify-center ">Blog</h1>
       <div>
         {blogs.map((blog) => {
           return (
-            <div key={blog.slug}>
-              <h1 className="text-amber-950">{blog.title}</h1>
+            <div key={blog.slug} className="flex justify-center">
+                <BlogPreview {...blog}/>
             </div>
           );
         })}

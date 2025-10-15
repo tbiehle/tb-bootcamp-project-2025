@@ -1,11 +1,4 @@
-export interface Blog {
-  title: string;
-  date: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  slug: string; // URL name used to redirect to different page
-};
+import Blog from "@/types/blog";
 
 const blogs: Blog[] = [
   {
