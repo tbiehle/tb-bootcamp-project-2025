@@ -10,6 +10,18 @@
 
     /* fonts */
     --font-title: "Radley", serif;
+
+    /* animations */
+    --animate-rock: rock 5s ease-in-out infinite;
+    @keyframes rock {
+    0%,
+    100% {
+      transform: rotate(var(--deg-from));
+    }
+    50% {
+      transform: rotate(var(--deg-to));
+    }
+  }
 }
 
 :root {
