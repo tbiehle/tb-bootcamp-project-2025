@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface customImageProps {
-  src: string;
+  src: StaticImageData;
   alt: string;
 }
 
@@ -11,13 +11,10 @@ export default function PictureFrame(props: customImageProps) {
     <Image
       src={props.src}
       alt={props.alt}
-      width={10000}
-      height={10000}
+      width={props.src.width}
+      height={props.src.height}
       quality={100}
-      className="
-      border-white border-8 shadow-xl 
-      animate-rock [--deg-from:5deg] [--deg-to:7deg]
-      "
+      className="object-contain border-white border-8 shadow-xl/30 animate-rock [--deg-from:-2deg] [--deg-to:2deg]"
     ></Image>
   );
 }
