@@ -14,7 +14,7 @@ export default function PictureFrame(props: customImageProps) {
       width={props.src.width}
       height={props.src.height}
       quality={100}
-      className="object-contain border-white border-8 shadow-xl/30 animate-rock [--deg-from:-2deg] [--deg-to:2deg]"
+      className="object-contain line-white border-8 shadow-xl/30 aspect-[4/3]"
     ></Image>
   );
 }
