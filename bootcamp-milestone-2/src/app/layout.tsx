@@ -26,12 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-50`}
+        className={`font-title ${geistMono.variable} antialiased bg-orange-50`}
       >
         <NavBar />
-        <div className="pt-6">
+        <div>
             {children}
         </div>
+        <div className="fixed bottom-0 text-gray-600 text-center w-full">© Travis Biehle, 2025. All Rights Reserved.</div>
       </body>
     </html>
   );

@@ -20,8 +20,7 @@ export default function PhotoStack({ images }: { images: StaticImageData[] }) {
   //   );
 
   return (
-    <div className="relative w-full h-full overflow-hidden shadow-2xl animate-rock [--deg-from:-2deg] [--deg-to:2deg]"> 
-    {/* ^ THIS ONE RIGHT HERE */}
+    <div className="relative w-full h-full overflow-hidden shadow-2xl animate-rock"> 
       {images.map((img, i) => (
         <div
           key={i}
