@@ -11,18 +11,15 @@
     /* fonts */
     --font-title: "Radley", serif;
 
-    /* images */
-    --resume-bg: url("../../public/bama_hills.jpg")
-
     /* animations */
-    --animate-rock: rock 5s ease-in-out infinite;
+    --animate-rock: rock 10s ease-in-out infinite;
     @keyframes rock {
     0%,
     100% {
-      transform: rotate(-3deg);
+      transform: rotate(-1deg);
     }
     50% {
-      transform: rotate(3deg);
+      transform: rotate(2deg);
     }
   }
 }

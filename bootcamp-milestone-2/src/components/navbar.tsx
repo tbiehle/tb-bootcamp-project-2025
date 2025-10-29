@@ -10,7 +10,6 @@ export default function NavBar() {
         <Link href="/" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">home</Link>
         <Link href="/blog" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">blog</Link>
         <Link href="/resume" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">resume</Link>
-        <Link href="/about" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">contact</Link>
       </nav>
     </header>
   );
