@@ -9,6 +9,7 @@ export default function NavBar() {
       <nav className="flex flex-row text-2xl font-sans tracking-normal relative right-3 space-x-5">
         <Link href="/" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">home</Link>
         <Link href="/blog" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">blog</Link>
+        <Link href="/portfolio" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">portfolio</Link>
         <Link href="/resume" className="underline underline-offset-4 decoration-transparent hover:decoration-green-950 duration-200 origin-left hover:text-green-950">resume</Link>
       </nav>
     </header>
