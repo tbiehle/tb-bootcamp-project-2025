@@ -23,7 +23,7 @@ export default function BlogPreview({ blog }: Props) {
             <div>{blog.description}</div>
           </div>
           {/* date */}
-          <div className="text-sm">{blog.date.toString()}</div>
+          <div className="text-sm">{blog.date.toDateString()}</div>
         </div>
         <Image
           alt={blog.image_alt}
