@@ -3,7 +3,7 @@ import Image from "next/image";
 import Blog from "@/database/blogSchema";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 async function getBlog(slug: string) {
@@ -24,7 +24,13 @@ async function getBlog(slug: string) {
   }
 }
 
-export default async function BlogPage({ params: { slug } }: Props) {
+export default async function BlogPage(props: Props) {
+  const params = await props.params;
+
+  const {
+    slug
+  } = params;
+
   const blog: Blog = await getBlog(slug);
   const date = new Date(blog.date);
 
