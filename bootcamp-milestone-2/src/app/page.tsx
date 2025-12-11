@@ -23,13 +23,13 @@ export default function Home() {
             solving a crossword.
           </p>
         </div>
-        <div className="flex w-md aspect-[4/3]">
+        <div className="flex w-md aspect-[4/3] animate-rock">
             <PhotoStack images={images}/>
         </div>
       </div>
-      <div className="h-100 bg-green-950">
+      {/* <div className="h-100 bg-green-950">
       
-      </div>
+      </div> */}
     </div>
   );
 }
