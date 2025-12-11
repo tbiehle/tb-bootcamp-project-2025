@@ -3,15 +3,15 @@ import connectDB from "@/database/db";
 import { CommentType } from "@/database/commentSchema";
 import Blog from "@/database/blogSchema";
 
-type IParams = {
+interface RouteContext {
   params: {
     slug: string;
   };
-};
+}
 
-export async function GET(req: NextRequest, { params }: IParams) {
+export async function GET(req: NextRequest, context: RouteContext) {
   await connectDB();
-  const { slug } = await params;
+  const { slug } = context.params;
 
   try {
     const blog = await Blog.findOne({ slug }).orFail();
@@ -23,11 +23,11 @@ export async function GET(req: NextRequest, { params }: IParams) {
   }
 }
 
-export async function POST(req: NextRequest, { params }: IParams) {
+export async function POST(req: NextRequest, context: RouteContext) {
   await connectDB();
 
   try {
-    const { slug } = await params;
+    const { slug } = context.params;
     const { user, content } = await req.json();
     const blog = await Blog.findOne({ slug }).orFail();
 
