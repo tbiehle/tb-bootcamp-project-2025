@@ -15,7 +15,7 @@ type BlogClientProps = {
 async function getBlog(slug: string) {
   try {
     // fetches blog from API endpoint
-    const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+    const res = await fetch(`/api/blog/${slug}`, {
       cache: "no-store",
     });
 
