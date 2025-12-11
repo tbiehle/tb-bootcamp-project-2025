@@ -1,8 +1,8 @@
 import React from "react";
-import CommentSchema from "@/database/commentSchema";
+import { CommentType } from "@/database/commentSchema";
 
 type CommentProps = {
-  comment: CommentSchema;
+  comment: CommentType;
 }
 
 export default function Comment({ comment }: CommentProps) {
