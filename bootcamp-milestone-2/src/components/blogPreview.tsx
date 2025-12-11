@@ -1,10 +1,10 @@
 import React from "react";
-import Blog from "@/database/blogSchema";
+import { BlogType } from "@/database/blogSchema";
 import Link from "next/link";
 import Image from "next/image";
 
 type Props = {
-  blog: Blog;
+  blog: BlogType;
 };
 
 export default function BlogPreview({ blog }: Props) {
