@@ -1,20 +1,21 @@
 import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
-type Comment = {
+export type CommentType = {
   user: string;
-  content: string; // text content of comment
+  content: string;
   date: Date;
 };
 
 // mongoose schema
-const blogSchema = new Schema<Comment>({
+const commentSchema = new Schema<CommentType>({
   user: { type: String, required: true },
   content: { type: String, required: true },
-  date: { type: Date, required: false, default: new Date() },
+  date: { type: Date, default: Date.now },
 });
 
 // defining the collection and model
-const Comment = mongoose.models["comments"] || mongoose.model("comments", blogSchema);
+const CommentModel =
+  mongoose.models["comments"] || mongoose.model("comments", commentSchema);
 
-export default Comment;
+export { commentSchema, CommentModel };
